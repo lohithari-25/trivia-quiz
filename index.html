@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand quiz" href="#">QUIZ GAME</a>
+            <ul class="navbar-nav d-flex flex-row me-auto mb-2 mb-lg-0 ull">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#">About</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#">Quiz</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#">Feedback</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://image.lexica.art/full_webp/25dcef7c-5341-4756-b4cd-fc4ab9b1d8d1" class="d-block w-100" alt="..." height="300px">
+            </div>
+            <div class="carousel-item">
+                <img src="https://image.lexica.art/full_webp/04959cfd-3d37-4103-8dad-46b01c015d28" class="d-block w-100" alt="..." height="300px">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.shutterstock.com/image-vector/quiz-thin-line-concept-vector-260nw-663203059.jpg" class="d-block w-100" alt="..." height="300px">
+            </div>
+        </div>
+        <h1 class="about">ABOUT</h1>
+    <p class="para">Create a container for the quiz section.
+        Write a JavaScript function to load a set of quiz questions dynamically. Each question should have multiple choice answers.
+        Use Bootstrap cards to display each question and its answers. Only show one question at a time.
+        Include a "Next" button to move to the next question.
+        After the last question, display a "Submit" button.
+    </p>
+    <h1 class="start">Start the quiz. All The Best...!👍</h1>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden ">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="quiz-container container mt-5 ">
+        <div id="quiz"></div>
+        <button id="prevButton" class="btn btn-secondary" onclick="prevQuestion()" disabled>Previous</button>
+        <button id="nextButton" class="btn btn-primary" onclick="nextQuestion()">Next</button>
+        <button id="submitButton" class="btn btn-success" onclick="submitQuiz()" style="display: none;">Submit</button>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="feedback">Feedback</h1>
+        <form id="feedbackForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+       
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="feedbackToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Feedback</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Your feedback has been submitted successfully!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.quiz{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:23px;
+    font-weight: 700;
+    
+}
+.ull{
+    font-size: 21px;
+    margin-left: 230px;
+    margin-top: 10px;
+    
+}
+.about{
+    font-size: 30px;
+    padding-left: 30px;
+    font-weight: 700;
+}
+.para{
+    padding-left: 30px;
+    letter-spacing: 2px;
+}
+.navbar-custom {
+    height: 50px;
+    text-align: center;
+}
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link {
+    line-height: 10px;
+}
+.quiz-container {
+    padding: 20px;
+}
+.quiz-card {
+    display: none;
+}
+.quiz-card.active {
+    display: block;
+}
+.start{
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+
